@@ -17,9 +17,9 @@ public:
 		m_VecModel.m_VecPrimitives.push_back(primitive);
 
 		return primitive;
-	};
+	}
 
-	bool DeletePrimitive(int prNum)
+	bool DeletePrimitive(size_t prNum)
 	{
 		if (m_VecModel.m_VecPrimitives.size() < prNum)
 			return false;
@@ -129,7 +129,7 @@ public:
 		return false;
 	}
 
-	bool Select(int prNum)
+	bool Select(size_t prNum)
 	{
 		if (m_VecModel.m_VecPrimitives.size() < prNum)
 			return false;
@@ -141,7 +141,7 @@ public:
 		return true;
 	}
 
-	bool Unselect(int prNum)
+	bool Unselect(size_t prNum)
 	{
 		if (m_VecModel.m_VecSelectedPrimitives.size() < prNum)
 			return false;
